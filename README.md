@@ -6,6 +6,8 @@
 
 每天的==座位预约== 和 ==签到签退==情况会在 完成后 ==自动推送到你的微信==，实时反馈每日==座位预约==和==签到==, ==签退==情况。无需人工操作。
 
+》》》》》》》》    重点：`无视`图书馆座位系统  `校园网` 限制   《《《《《《《《
+
 
 
 GitHub链接： https://github.com/ahaox/CDU-Lib-Robot
@@ -50,17 +52,21 @@ Gitee链接： https://gitee.com/ahaox/CDU-Lib-Robot
 
 ## 二、主要功能
 
-#### 1.  提前一天预约座位
+#### 1. 无视校园网限制
+
+zhòng suǒ zhōu zhī， 成大图书馆座位系统需要校园网才能访问。本项目无需校园网！！！！
+
+#### 2.  提前一天预约座位
 
 预约后微信推送 预约消息
 
 <img src="https://gitee.com/ahaox/images-picgo/raw/master/img/20210601204404.png" style="zoom: 33%;" />
 
-#### 2. 支持多时间段预约
+#### 3. 支持多时间段预约
 
 
 
-#### 3. 支持自动签到签退
+#### 4. 支持自动签到签退
 
 <img src="https://gitee.com/ahaox/images-picgo/raw/master/img/20210601204915.png" alt="image-20210601204915855" style="zoom: 33%;" />
 

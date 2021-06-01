@@ -55,7 +55,7 @@ class Config:
         :return:
         """
         config = ConfigParser()
-        config.read('./config/configLocal.ini', encoding='UTF-8-sig')
+        config.read('./config/config.ini', encoding='UTF-8-sig')
         username = config['token']['username']
         password = config['token']['password']
         startTime = config['reserve']['startTime']

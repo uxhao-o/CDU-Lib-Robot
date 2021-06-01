@@ -116,7 +116,10 @@ class CduLibClock:
         elif 'title=当前使用中' in flag:
             NotifyService.myPrint('当前正在使用中, 无需签到')
         elif 'title=操作失败' in flag:
+            NotifyService.server(config=self.config, title='设备已分配给他人使用', name=self.cduLibService.name, msg=self.msg)
             NotifyService.myPrint('设备已分配给他人使用,未暂离')
+        else:
+            pass
 
     def signOut(self):
         """

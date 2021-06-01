@@ -2,7 +2,9 @@
 
 ### 1. CDU-Lib-Robot简介
 
-`CDU-Lib-Robot`为成都大学图书馆座位预约系统全自动工具。`每天定时预约座位（预约的是第二天的位置, 支持多时间段预约）` + `自动签到签退`。每天的`座位预约` 和 `签到签退`情况会在 完成后 自动推送到你的微信，实时反馈每日`座位预约`和`签到签退`情况。无需人工操作。特别提醒：自动`签到签退`可能会存在第一次使用需要绑定账号的情况，目前未解决，后续版本会更新。
+`CDU-Lib-Robot`为成都大学图书馆座位预约系统全自动工具。==每天定时预约座位（预约的是第二天的位置, 支持多时间段预约）== + ==自动签到签退==。
+
+每天的==座位预约== 和 ==签到签退==情况会在 完成后 ==自动推送到你的微信==，实时反馈每日==座位预约==和==签到==, ==签退==情况。无需人工操作。
 
 
 
@@ -10,15 +12,21 @@ GitHub链接： https://github.com/ahaox/CDU-Lib-Robot
 
 Gitee链接： https://gitee.com/ahaox/CDU-Lib-Robot
 
-作者：`ahao`。
+作者：`ahao`，网站: https://www.uxhao.com 本项目的实现过程已更新到网站上。
+
+
 
 ### 2. 发布日志
 
-##### 2021.05.31 发布 v1
+2021.06.01 发布 v1
+
+
 
 ### 3. 发布初心
 
-`方便成大考研学子 和 图书馆常驻专家 使用，摆脱每天都要预约位置 和 签到签退的烦扰！`
+==方便成大考研学子 和 图书馆常驻专家 使用，摆脱每天都要预约位置 和 签到 签退的烦扰！==
+
+
 
 ### 4. 注意事项
 
@@ -42,11 +50,27 @@ Gitee链接： https://gitee.com/ahaox/CDU-Lib-Robot
 
 ## 二、主要功能
 
-### 1.  提前一天预约座位
+#### 1.  提前一天预约座位
 
-### 2. 支持多时间段预约
+预约后微信推送 预约消息
 
-### 3. 支持自动签到签退
+<img src="https://gitee.com/ahaox/images-picgo/raw/master/img/20210601204404.png" style="zoom: 33%;" />
+
+#### 2. 支持多时间段预约
+
+
+
+#### 3. 支持自动签到签退
+
+<img src="https://gitee.com/ahaox/images-picgo/raw/master/img/20210601204915.png" alt="image-20210601204915855" style="zoom: 33%;" />
+
+签到成功，自动推送消息到微信
+
+<img src="https://gitee.com/ahaox/images-picgo/raw/master/img/20210601205132.png" alt="image-20210601205132903" style="zoom:50%;" />
+
+签退成功，推送微信
+
+<img src="https://gitee.com/ahaox/images-picgo/raw/master/img/20210601205015.png" alt="image-20210601205015350" style="zoom:50%;" />
 
 
 
@@ -54,9 +78,9 @@ Gitee链接： https://gitee.com/ahaox/CDU-Lib-Robot
 
 ### 1. 下载项目代码
 
-进入本项目代码仓下载ZIP压缩包到本地，并解压到桌面。
+进入本项目代码仓下载ZIP压缩包到本地，并解压到桌面。（建议从gitee下载）
 
-<img src="https://gitee.com/ahaox/images-picgo/raw/master/img/20210531225656.png" alt="image-20210531225649629" style="zoom: 33%;" />
+![image-20210601205450235](https://gitee.com/ahaox/images-picgo/raw/master/img/20210601205450.png)
 
 
 
@@ -72,47 +96,49 @@ Gitee链接： https://gitee.com/ahaox/CDU-Lib-Robot
 
 登录以后按照流程自行开通。
 
-### 3. 新建函数
+### 3. 创建座位预约服务云函数
 
-① 创建函数名`CDU-Lib-Robot-Reserve` ，创建方式选择 **自定义创建** ，运行环境选**Python 3.6**，
+> 注意：如果要使用，座位预约，签到，签退功能需要创建三个云函数
 
-执行方法设置为 `MainReserve.main`
+#### 3.1 创建函数
+
+创建函数名`CDU-Lib-Robot-Reserve` （用于座位预约服务），创建方式选择 **自定义创建** ，运行环境选**Python 3.6**，执行方法设置为 `MainReserve.main`
 
 <img src="https://gitee.com/ahaox/images-picgo/raw/master/img/20210601083127.png" alt="image-20210601083120850" style="zoom:50%;" />
 
-② 创建函数名`CDU-Lib-Robot-Reserve`
 
 
-
-### 4. 上传代码
+#### 3.2 上传代码
 
 确保环境为**python 3.6**，执行方法改为：`index.main`，提交方式一定要选 **本地上传文件夹** ，然后选择解压到桌面的文件夹 **isp-cdu-master** ，然后点击这个上传把文件夹上传进来。
 
-![image-20210208221947302](https://cdn.jsdelivr.net/gh/ahaox/pictures/image20210208221947.png)
+<img src="https://gitee.com/ahaox/images-picgo/raw/master/img/20210601185419.png" alt="image-20210601185419023" style="zoom:67%;" />
 
 文件夹上传成功后，点击`高级配置`
 
 <img src="https://gitee.com/ahaox/images-picgo/raw/master/img/20210601083232.png" alt="image-20210601083232099"  />
 
-### 5. 高级配置
+
+
+#### 3.3 高级配置
 
 内存用不了太大，**128MB**就够了，超时时间改为最大的**900秒**，然后点击最下面的完成。
 
 <img src="https://gitee.com/ahaox/images-picgo/raw/master/img/20210601083205.png" alt="image-20210601083204885" style="zoom: 33%;" />
 
-### 6. 配置账号
+#### 3.4 配置账号密码、座位信息、预约时间
 
-自己改下`config.ini`里的`账号密码`、`预约时间`、`座位信息`及`Server酱密匙`，更改完后点击保存，部署并测试。如果你的配置没有错，稍等几分钟便可以看到结果，在此期间不要刷新页面。结果会在执行日志里。 
+自己改下`config.ini`里的`账号密码`、`预约时间`、`座位信息`及`Server酱密匙`，更改完后按`Ctrl+S` 保存修改。
 
 预约座位信息的获取方式： [点击这里](GetSeatInfo.md)
 
-**Server酱密匙** 用于微信推送打卡情况，需要自己申请，申请地址： http://sc.ftqq.com/
+**Server酱密匙** 用于微信推送打卡情况，需要自己申请，申请地址： http://sc.ftqq.com/， 
 
 ![image-20210601084129561](https://gitee.com/ahaox/images-picgo/raw/master/img/20210601084129.png)
 
 
 
-### 7. 安装依赖
+#### 3.5 安装依赖
 
 点击终端，然后选择新终端，显示终端窗口，在终端窗口里面输入：
 
@@ -144,11 +170,83 @@ cd src/ && /var/lang/python3/bin/python3 -m pip install -r requirements.txt -t .
 
 
 
-### 8. 设置定时
+#### 3.6 设置定时
 
-新建触发器，触发周期为自定义，表达式就是每天的什么时候做任务，我选择的早上8点30分，可以自行修改，填好后点击提交即可，到此你的ISP-CDU疫情自动打卡项目便部署完成，感谢使用！！
+新建触发器，触发周期为自定义，表达式就是每天的什么时候执行，这里设置为每天0点0分40秒，可以自行修改（不建议修改），填好后点击提交即可，此时 `座位预约服务` 就已经部署好了。
 
-![image-20210208230222605](https://cdn.jsdelivr.net/gh/ahaox/pictures/image20210208230222.png)
+时间表达式具体可参考：[云函数 定时触发器 - 开发指南 - 文档中心 - 腾讯云 (tencent.com)](https://cloud.tencent.com/document/product/583/9708#cron-.E8.A1.A8.E8.BE.BE.E5.BC.8F)
+
+![image-20210601192629284](https://gitee.com/ahaox/images-picgo/raw/master/img/20210601192629.png)
+
+
+
+### 4. 签到服务
+
+#### 4.1 克隆云函数
+
+直接复制 ==座位预约服务云函数== `CDU-Lib-Robot-Reserve` ,   把函数名称更改为：`CDU-Lib-Robot-SignIn` 
+
+![image-20210601193511214](https://gitee.com/ahaox/images-picgo/raw/master/img/20210601193511.png)
+
+
+
+#### 4.2 修改函数执行方法
+
+进入云函数后，修改执行方法为：`MainSignIn.main`
+
+<img src="https://gitee.com/ahaox/images-picgo/raw/master/img/20210601193822.png" alt="image-20210601193822433" style="zoom: 67%;" />
+
+点击部署，部署成功后再测试
+
+![image-20210601193943990](https://gitee.com/ahaox/images-picgo/raw/master/img/20210601193944.png)
+
+#### 4.3 设置定时
+
+签到定时的设置是根据 在 3.4时设置的预约时间段的开始时间来设置的，
+
+比如：我预约的时间段为每天 08:20 - 14:20,    14:25 - 20:25
+
+则这里需要创建两个触发器：
+
+第一个时间段 Cron表达式分别为： `0 16 8 * * * *` （表示每天8点16分开始执行签到服务，也就是比第一个时间段的开始时间提起4分钟进行签到）
+
+第二个时间段 Cron表达式分别为： `0 21 14 * * * *` （表示每天14点21分开始执行签到服务，也就是比第二个时间段的开始时间提起4分钟进行签到）
+
+![image-20210601200014142](https://gitee.com/ahaox/images-picgo/raw/master/img/20210601200014.png)
+
+<img src="https://gitee.com/ahaox/images-picgo/raw/master/img/20210601200931.png" alt="image-20210601200931096" style="zoom:50%;" />
+
+### 5. 签退服务
+
+#### 5.1 克隆项目
+
+直接复制 ==座位预约服务云函数== `CDU-Lib-Robot-Reserve` ,   把函数名称更改为：`CDU-Lib-Robot-SignOut` 
+
+![image-20210601194934489](https://gitee.com/ahaox/images-picgo/raw/master/img/20210601194934.png)
+
+#### 5.2 修改函数执行方法
+
+进入云函数后，修改执行方法为：`MainSignOut.main`
+
+![image-20210601195253055](https://gitee.com/ahaox/images-picgo/raw/master/img/20210601195253.png)
+
+点击部署，部署成功后再测试
+
+![image-20210601195334718](https://gitee.com/ahaox/images-picgo/raw/master/img/20210601195334.png)
+
+#### 5.3 设置定时
+
+设置方式和签到服务一样，但是时间是根据结束时间来设定的。
+
+比如：我预约的时间段为每天 08:20 - 14:20,    14:25 - 20:25
+
+则这里需要创建两个触发器：
+
+第一个时间段 Cron表达式分别为： `0 16 14 * * * *` （表示每天14点16分开始执行签退服务，也就是比第二个时间段的结束时间提起4分钟进行签退）
+
+第二个时间段 Cron表达式分别为： `0 21 20 * * * *` （表示每天20点21分开始执行签退服务，也就是比第二个时间段的结束时间提起4分钟进行签退）
+
+<img src="https://gitee.com/ahaox/images-picgo/raw/master/img/20210601201111.png" alt="image-20210601201111037" style="zoom:50%;" />
 
 
 

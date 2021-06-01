@@ -1,3 +1,5 @@
+
+
 ## 座位信息获取
 
 ###  1. 现场拍下座位二维码
@@ -16,4 +18,4 @@
 
 稍等片刻，解析出座位二维码，`devLab`为`100xxxx19` (c=  后面那串数)    `devId`为`100xxx01` (Seat后面那串数，去掉下划线)  ,  `sysId`为 `1II` (最后三位)   
 
-![image-20210601085510871](https://gitee.com/ahaox/images-picgo/raw/master/img/20210601085510.png)
+<img src="https://gitee.com/ahaox/images-picgo/raw/master/img/20210601085510.png" alt="image-20210601085510871" style="zoom:50%;" />

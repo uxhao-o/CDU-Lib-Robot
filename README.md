@@ -254,5 +254,5 @@ cd src/ && /var/lang/python3/bin/python3 -m pip install -r requirements.txt -t .
 
 ![pay](https://cdn.jsdelivr.net/gh/ahaox/pictures/image20210208232946.png "在这里输入图片标题")
 
- **金额不论大小。一分也是爱。** 
+ **金额不论大小, 一分也是爱。** 
 

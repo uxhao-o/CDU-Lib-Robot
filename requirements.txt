@@ -1,3 +1,4 @@
 requests~=2.23.0
 datetime~=4.3
 PyExecJS
+pytz~=2020.1

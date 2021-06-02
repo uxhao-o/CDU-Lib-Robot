@@ -5,8 +5,9 @@
 """
 座位预约服务文件
 """
-import datetime
+from datetime import datetime, timedelta
 import json
+import pytz
 import requests
 from util.Utils import *
 from service.VpnService import CduAuthentication
@@ -64,7 +65,7 @@ class CduLibService:
         endList = self.config['endTime'].split(',')
         for reserveTime in zip(startList, endList):
             # 当前时间加 1 天
-            day = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime("%Y-%m-%d")
+            day = (datetime.now(pytz.timezone('Asia/Shanghai')) + timedelta(days=1)).strftime("%Y-%m-%d")
             # 拼接时间字符串
             start = day + '+' + reserveTime[0][:2] + '%3A' + reserveTime[0][2:]
             end = day + '+' + reserveTime[1][:2] + '%3A' + reserveTime[1][2:]

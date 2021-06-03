@@ -1,4 +1,4 @@
-## 一、CDU-Lib-Robot 图书管全自动机器人
+## 一、CDU-Lib-Robot 图书馆全自动机器人
 
 ### 1. CDU-Lib-Robot简介
 
@@ -28,7 +28,7 @@ Gitee链接： https://gitee.com/ahaox/CDU-Lib-Robot
 
 `方便成大考研学子 和 图书馆常驻专家 使用，摆脱每天都要预约位置 和 签到 签退的烦扰！`
 
-》》》》》请勿将CDU-Lib-Robot 用于 `恶意占座` 等浪费图书馆公共资源行为《《《《《《
+》》》请勿将CDU-Lib-Robot 用于包括但不限于 `恶意占座` 等浪费图书馆公共资源行为《《《
 
 
 

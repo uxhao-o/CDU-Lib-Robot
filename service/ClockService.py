@@ -104,10 +104,8 @@ class CduLibClock:
             url2 = baseUrl + "/pages/WxSeatSign.aspx?Userin=true"
             resp2 = requests.get(url=url2, headers=header, allow_redirects=False)
             location2 = resp2.headers['Location']
-
+            # TODO 签到服务时获取到的是当前座位下一个时间段的信息，非当前时间段，待解决！
             msg = unquote(location2).split('&')[2].split('=')[1]
-
-            print(msg)
             if unquote(location2).split('&')[1].split('=')[1] == '操作成功':
                 NotifyService.myPrint('座位: {0}, {1}, {2}'.format(self.config['devId'], ResvMsg, msg))
                 self.msg = '座位: {0}, {1}, {2}'.format(self.config['devId'], ResvMsg, msg)

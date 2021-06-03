@@ -104,7 +104,10 @@ class CduLibClock:
             url2 = baseUrl + "/pages/WxSeatSign.aspx?Userin=true"
             resp2 = requests.get(url=url2, headers=header, allow_redirects=False)
             location2 = resp2.headers['Location']
+
             msg = unquote(location2).split('&')[2].split('=')[1]
+
+            print(msg)
             if unquote(location2).split('&')[1].split('=')[1] == '操作成功':
                 NotifyService.myPrint('座位: {0}, {1}, {2}'.format(self.config['devId'], ResvMsg, msg))
                 self.msg = '座位: {0}, {1}, {2}'.format(self.config['devId'], ResvMsg, msg)
@@ -144,7 +147,8 @@ class CduLibClock:
             url2 = baseUrl + "/Pages/WxSeatSign.aspx?DoUserOut=2"
             resp2 = requests.get(url=url2, headers=header, allow_redirects=False)
             location2 = resp2.headers['Location']
-            resvMsg = unquote(location1).split('&')[-2].split(',')[0]
+            # 去掉微信推送显示resvMsg
+            resvMsg = unquote(location1).split('&')[-2].split(',')[0].split('=')[1]
             if unquote(location2).split('&')[1].split('=')[1] == '操作成功':
                 NotifyService.myPrint('座位: {0}, {1}, 签退成功'.format(self.config['devId'], resvMsg))
                 self.msg = '座位: {0}, {1}, 签退成功'.format(self.config['devId'], resvMsg)

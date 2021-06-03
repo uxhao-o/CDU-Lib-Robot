@@ -64,7 +64,7 @@ zhòng suǒ zhōu zhī， 成大图书馆座位系统需要校园网才能访问
 
 预约后微信推送 预约消息
 
-<img src="https://gitee.com/ahaox/images-picgo/raw/master/img/20210601204404.png" style="zoom: 33%;" />
+<img src="https://gitee.com/ahaox/images-picgo/raw/master/img/20210603074633.png" alt="image-20210603074633554" style="zoom: 33%;" />
 
 #### 3. 支持多时间段预约
 
@@ -76,11 +76,11 @@ zhòng suǒ zhōu zhī， 成大图书馆座位系统需要校园网才能访问
 
 签到成功，自动推送消息到微信
 
-<img src="https://gitee.com/ahaox/images-picgo/raw/master/img/20210601205132.png" alt="image-20210601205132903" style="zoom:50%;" />
+<img src="https://gitee.com/ahaox/images-picgo/raw/master/img/20210603074705.png" alt="image-20210603074705262" style="zoom:50%;" />
 
 签退成功，推送微信
 
-<img src="https://gitee.com/ahaox/images-picgo/raw/master/img/20210601205015.png" alt="image-20210601205015350" style="zoom:50%;" />
+![image-20210603074724010](https://gitee.com/ahaox/images-picgo/raw/master/img/20210603074724.png)
 
 
 
@@ -137,6 +137,22 @@ zhòng suǒ zhōu zhī， 成大图书馆座位系统需要校园网才能访问
 <img src="https://gitee.com/ahaox/images-picgo/raw/master/img/20210601083205.png" alt="image-20210601083204885" style="zoom: 33%;" />
 
 #### 3.4 配置账号密码、座位信息、预约时间
+
+配置参数说明：
+
+| 参数名            | 参数示例            | 参数说明                                           |
+| ----------------- | ------------------- | -------------------------------------------------- |
+| username          | 2018XXXXXXXX        | 成大学号                                           |
+| password          | 123456abcd          | 教务处密码（和图书馆密码一致，不一致请修改）       |
+| startTime         | 0820,2122           | 每个预约时段的起始时间，多个起始时间用英文逗号隔开 |
+| endTime           | 1405,2230           | 每个预约时段的结束时间，多个起始结束用英文逗号隔开 |
+| devLab            | 10xxxxx19           | 座位区域编码                                       |
+| devId             | 10xxxxx95           | 座位编号                                           |
+| sysId             | 1II                 | 座位sysid，默认为1II，可以不修改                   |
+| isEveryDayReserve | True                | 是否每天都预约，当前版本只支持每天都预约。请勿修改 |
+| sckey             | SCU1348xxxxxxxxxxxx | Server酱的密匙，用于微信推送消息                   |
+
+具体配置示例请参考配置文件。
 
 自己改下`config.ini`里的`账号密码`、`预约时间`、`座位信息`及`Server酱密匙`，更改完后按`Ctrl+S` 保存修改。
 

@@ -120,7 +120,7 @@ zhòng suǒ zhōu zhī， 成大图书馆座位系统需要校园网才能访问
 
 #### 3.2 上传代码
 
-确保环境为**python 3.6**，执行方法改为：`index.main`，提交方式一定要选 **本地上传文件夹** ，然后选择解压到桌面的文件夹 **CDU-Lib-Robot** ，然后点击这个上传把文件夹上传进来。
+确保环境为**python 3.6**，执行方法改为：`MainReserve.main `，提交方式一定要选 **本地上传文件夹** ，然后选择解压到桌面的文件夹 **CDU-Lib-Robot** ，然后点击这个上传把文件夹上传进来。
 
 <img src="https://gitee.com/ahaox/images-picgo/raw/master/img/20210601185419.png" alt="image-20210601185419023" style="zoom:67%;" />
 

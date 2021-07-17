@@ -5,6 +5,8 @@
 """
 打卡服务文件
 """
+import json
+
 import requests
 from urllib.parse import unquote
 from service.ReserveService import CduLibService
@@ -122,9 +124,11 @@ class CduLibClock:
         else:
             pass
 
+    @DeprecationWarning
     def signOut(self):
         """
-        签退, 实现预约座位签退
+        签退, 实现预约座位签退, 二维码无法签退，已废弃
+        :date: 2021.07.17
         :return:
         """
         # 签到系统登录之前先 通过vpn认证和 图书馆登录
@@ -161,4 +165,42 @@ class CduLibClock:
             NotifyService.server(config=self.config, title='座位未使用无需签退', name=self.cduLibService.name, msg=self.msg)
         else:
             NotifyService.myPrint('签退遇到未知错误')
+
+
+    def signOutNew(self):
+        """
+        签退, 实现预约座位签退, 通过预约记录的id进行签退
+        :date: 2021.07.17 22:30 更新图书馆二维码无法签退问题
+        :return:
+        """
+        # 签退之前先 通过vpn认证和 图书馆登录
+        self.cduLibService.login()
+        header = Header.signInHeader(self.cduLibService.Cookie)
+
+        # 先获取当前预约的单号id
+        getResvIdUrl = 'http://libzwyy-cdu-edu-cn.vpn.cdu.edu.cn:8118/ClientWeb/pro/ajax/reserve.aspx?stat_flag=9&act='\
+                       'get_my_resv'
+        resvIdResp = requests.get(url=getResvIdUrl, headers=header, allow_redirects=False)
+        # json字符串转字典
+        resvIdResp = json.loads(resvIdResp.text)
+        resvId = resvIdResp['data'][0]['id']  # 默认当前使用中的预约记录排在第一个
+        # 签退链接
+        baseUrl = "http://libzwyy-cdu-edu-cn.vpn.cdu.edu.cn:8118"
+        url1 = baseUrl + "/ClientWeb/pro/ajax/reserve.aspx?act=resv_leave&type=2&resv_id={0}".format(resvId)
+        resp1 = requests.get(url=url1, headers=header, allow_redirects=False)
+        resp1 = json.loads(resp1.text)
+        msg = resp1['msg']  # 返回的结果
+        ret = resp1['ret']  # 成功的状态，1表示成功，0表示失败
+        if ret == '1':  # 签退成功
+            NotifyService.myPrint('签退成功, 座位: {0}, {1}'.format(self.config['devId'], msg))
+            self.msg = '签退成功, 座位: {0}, {1}'.format(self.config['devId'], msg)
+            NotifyService.server(config=self.config, title='座位签退成功', name=self.cduLibService.name, msg=self.msg)
+        elif ret == '0':  # 签退失败
+            NotifyService.myPrint('签退失败, 座位: {0}, {1}'.format(self.config['devId'], self.msg))
+            self.msg = '签退失败, 座位: {0}, {1}'.format(self.config['devId'], msg)
+            NotifyService.server(config=self.config, title='座位签退失败', name=self.cduLibService.name, msg=self.msg)
+        else:
+            self.msg = '签退遇到未知错误， 请登录CDU图书馆公众号自行查看'
+            NotifyService.myPrint('当前座位未使用，请登录CDU图书馆公众号自行查看')
+            NotifyService.server(config=self.config, title='签退遇到未知错误', name=self.cduLibService.name, msg=self.msg)
 

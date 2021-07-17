@@ -20,7 +20,7 @@ def main(event, content):
     # 创建图书馆签到类对象
     cduLibClock = CduLibClock(cduAuthentication, cduLibService, config)
     # 调用签到服务
-    cduLibClock.signOut()
+    cduLibClock.signOutNew()
 
 
 if __name__ == '__main__':

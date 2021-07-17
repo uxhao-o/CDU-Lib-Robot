@@ -22,6 +22,8 @@ Gitee链接： https://gitee.com/ahaox/CDU-Lib-Robot
 
 2021.06.01 发布 v1
 
+2021.07.17 发布 V2(cliplus), 二维码无法签退，更新后直接通过预约记录id向签退接口发起请求进行签退。
+
 
 
 ### 3. 发布初心

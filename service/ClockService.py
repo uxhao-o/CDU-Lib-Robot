@@ -180,10 +180,18 @@ class CduLibClock:
         # 先获取当前预约的单号id
         getResvIdUrl = 'http://libzwyy-cdu-edu-cn.vpn.cdu.edu.cn:8118/ClientWeb/pro/ajax/reserve.aspx?stat_flag=9&act='\
                        'get_my_resv'
-        resvIdResp = requests.get(url=getResvIdUrl, headers=header, allow_redirects=False)
+        resvIdRes = requests.get(url=getResvIdUrl, headers=header, allow_redirects=False)
         # json字符串转字典
-        resvIdResp = json.loads(resvIdResp.text)
-        resvId = resvIdResp['data'][0]['id']  # 默认当前使用中的预约记录排在第一个
+        resvIdRes = json.loads(resvIdRes.text)
+        resvData = resvIdRes['data']
+        resvId = None
+        for data in resvData:  # 从预约记录中查找当前已经生效的使用记录，并获取记录id
+            if data['state'].find('已生效') != -1:
+                resvId = data['id']
+                break
+        if resvId is None:  # 记录id为None表示没有生效的使用记录
+            NotifyService.myPrint('当前没有预约记录，无需签退')
+            return
         # 签退链接
         baseUrl = "http://libzwyy-cdu-edu-cn.vpn.cdu.edu.cn:8118"
         url1 = baseUrl + "/ClientWeb/pro/ajax/reserve.aspx?act=resv_leave&type=2&resv_id={0}".format(resvId)
@@ -191,11 +199,11 @@ class CduLibClock:
         resp1 = json.loads(resp1.text)
         msg = resp1['msg']  # 返回的结果
         ret = resp1['ret']  # 成功的状态，1表示成功，0表示失败
-        if ret == '1':  # 签退成功
+        if ret == 1:  # 签退成功
             NotifyService.myPrint('签退成功, 座位: {0}, {1}'.format(self.config['devId'], msg))
             self.msg = '签退成功, 座位: {0}, {1}'.format(self.config['devId'], msg)
             NotifyService.server(config=self.config, title='座位签退成功', name=self.cduLibService.name, msg=self.msg)
-        elif ret == '0':  # 签退失败
+        elif ret == 0:  # 签退失败
             NotifyService.myPrint('签退失败, 座位: {0}, {1}'.format(self.config['devId'], self.msg))
             self.msg = '签退失败, 座位: {0}, {1}'.format(self.config['devId'], msg)
             NotifyService.server(config=self.config, title='座位签退失败', name=self.cduLibService.name, msg=self.msg)

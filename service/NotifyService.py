@@ -22,7 +22,7 @@ class NotifyService:
         """
         if kwargs['config']['sckey'] == '':
             return
-        url = 'https://sc.ftqq.com/' + kwargs['config']['sckey'] + '.send'
+        url = 'https://sctapi.ftqq.com/' + kwargs['config']['sckey'] + '.send'
         # 构造发送内容
         title, content = NotifyService.diyText(config=kwargs['config'], title=kwargs['title'], name=kwargs['name'],
                                                msg=kwargs['msg'])

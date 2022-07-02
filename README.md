@@ -66,7 +66,7 @@ zhòng suǒ zhōu zhī， 成大图书馆座位系统需要校园网才能访问
 
 预约后微信推送 预约消息
 
-<img src="https://gitee.com/ahaox/images-picgo/raw/master/img/20210603074633.png" alt="image-20210603074633554" style="zoom: 33%;" />
+<img src="https://pictureahao.oss-cn-chengdu.aliyuncs.com/img/20210603074633.png" alt="image-20210603074633554" style="zoom: 33%;" />
 
 #### 3. 支持多时间段预约
 
@@ -74,15 +74,15 @@ zhòng suǒ zhōu zhī， 成大图书馆座位系统需要校园网才能访问
 
 #### 4. 支持自动签到签退
 
-<img src="https://gitee.com/ahaox/images-picgo/raw/master/img/20210601204915.png" alt="image-20210601204915855" style="zoom: 33%;" />
+<img src="https://pictureahao.oss-cn-chengdu.aliyuncs.com/img/20210601204915.png" alt="image-20210601204915855" style="zoom: 33%;" />
 
 签到成功，自动推送消息到微信
 
-<img src="https://gitee.com/ahaox/images-picgo/raw/master/img/20210603074705.png" alt="image-20210603074705262" style="zoom:50%;" />
+<img src="https://pictureahao.oss-cn-chengdu.aliyuncs.com/img/20210603074705.png" alt="image-20210603074705262" style="zoom:50%;" />
 
 签退成功，推送微信
 
-![image-20210603074724010](https://gitee.com/ahaox/images-picgo/raw/master/img/20210603074724.png)
+![image-20210603074724010](https://pictureahao.oss-cn-chengdu.aliyuncs.com/img/20210603074724.png)
 
 
 
@@ -92,13 +92,13 @@ zhòng suǒ zhōu zhī， 成大图书馆座位系统需要校园网才能访问
 
 进入本项目代码仓下载ZIP压缩包到本地，并解压到桌面。（建议从gitee下载）
 
-![image-20210601205450235](https://gitee.com/ahaox/images-picgo/raw/master/img/20210601205450.png)
+![image-20210601205450235](https://pictureahao.oss-cn-chengdu.aliyuncs.com/img/20210601205450.png)
 
 
 
 解压到桌面
 
-<img src="https://gitee.com/ahaox/images-picgo/raw/master/img/20210531225844.png" alt="image-20210531225844896" style="zoom:50%;" />
+<img src="https://pictureahao.oss-cn-chengdu.aliyuncs.com/img/20210531225844.png" alt="image-20210531225844896" style="zoom:50%;" />
 
 
 
@@ -116,7 +116,7 @@ zhòng suǒ zhōu zhī， 成大图书馆座位系统需要校园网才能访问
 
 创建函数名`CDU-Lib-Robot-Reserve` （用于座位预约服务），创建方式选择 **自定义创建** ，运行环境选**Python 3.6**，执行方法设置为 `MainReserve.main`
 
-<img src="https://gitee.com/ahaox/images-picgo/raw/master/img/20210601083127.png" alt="image-20210601083120850" style="zoom:50%;" />
+<img src="https://pictureahao.oss-cn-chengdu.aliyuncs.com/img/20210601083127.png" alt="image-20210601083120850" style="zoom:50%;" />
 
 
 
@@ -124,11 +124,11 @@ zhòng suǒ zhōu zhī， 成大图书馆座位系统需要校园网才能访问
 
 确保环境为**python 3.6**，执行方法改为：`index.main`，提交方式一定要选 **本地上传文件夹** ，然后选择解压到桌面的文件夹 **isp-cdu-master** ，然后点击这个上传把文件夹上传进来。
 
-<img src="https://gitee.com/ahaox/images-picgo/raw/master/img/20210601185419.png" alt="image-20210601185419023" style="zoom:67%;" />
+<img src="https://pictureahao.oss-cn-chengdu.aliyuncs.com/img/20210601185419.png" alt="image-20210601185419023" style="zoom:67%;" />
 
 文件夹上传成功后，点击`高级配置`
 
-<img src="https://gitee.com/ahaox/images-picgo/raw/master/img/20210601083232.png" alt="image-20210601083232099"  />
+<img src="https://pictureahao.oss-cn-chengdu.aliyuncs.com/img/20210601083232.png" alt="image-20210601083232099"  />
 
 
 
@@ -136,7 +136,7 @@ zhòng suǒ zhōu zhī， 成大图书馆座位系统需要校园网才能访问
 
 内存用不了太大，**128MB**就够了，超时时间改为最大的**900秒**，然后点击最下面的完成。
 
-<img src="https://gitee.com/ahaox/images-picgo/raw/master/img/20210601083205.png" alt="image-20210601083204885" style="zoom: 33%;" />
+<img src="https://pictureahao.oss-cn-chengdu.aliyuncs.com/img/20210601083205.png" alt="image-20210601083204885" style="zoom: 33%;" />
 
 #### 3.4 配置账号密码、座位信息、预约时间
 
@@ -162,7 +162,7 @@ zhòng suǒ zhōu zhī， 成大图书馆座位系统需要校园网才能访问
 
 **Server酱密匙** 用于微信推送打卡情况，需要自己申请，申请地址： http://sc.ftqq.com/， 
 
-![image-20210601084129561](https://gitee.com/ahaox/images-picgo/raw/master/img/20210601084129.png)
+![image-20210601084129561](https://pictureahao.oss-cn-chengdu.aliyuncs.com/img/20210601084129.png)
 
 
 
@@ -174,27 +174,27 @@ zhòng suǒ zhōu zhī， 成大图书馆座位系统需要校园网才能访问
 cd src/ && /var/lang/python3/bin/python3 -m pip install -r requirements.txt -t .
 ```
 
-![image-20210601090443503](https://gitee.com/ahaox/images-picgo/raw/master/img/20210601090443.png)
+![image-20210601090443503](https://pictureahao.oss-cn-chengdu.aliyuncs.com/img/20210601090443.png)
 
 输入命令后回车执行，等待安装完成。大概1分钟左右。
 
 如下图所示，出现Successfully 表示成功
 
-![image-20210601090530237](https://gitee.com/ahaox/images-picgo/raw/master/img/20210601090530.png)
+![image-20210601090530237](https://pictureahao.oss-cn-chengdu.aliyuncs.com/img/20210601090530.png)
 
 
 
 ① 部署函数
 
-![image-20210601090722643](https://gitee.com/ahaox/images-picgo/raw/master/img/20210601090722.png)
+![image-20210601090722643](https://pictureahao.oss-cn-chengdu.aliyuncs.com/img/20210601090722.png)
 
 ② 部署成功，点击测试
 
-![image-20210601090812453](https://gitee.com/ahaox/images-picgo/raw/master/img/20210601090812.png)
+![image-20210601090812453](https://pictureahao.oss-cn-chengdu.aliyuncs.com/img/20210601090812.png)
 
 
 
-![image-20210601091438051](https://gitee.com/ahaox/images-picgo/raw/master/img/20210601091438.png)
+![image-20210601091438051](https://pictureahao.oss-cn-chengdu.aliyuncs.com/img/20210601091438.png)
 
 
 
@@ -204,7 +204,7 @@ cd src/ && /var/lang/python3/bin/python3 -m pip install -r requirements.txt -t .
 
 时间表达式具体可参考：[云函数 定时触发器 - 开发指南 - 文档中心 - 腾讯云 (tencent.com)](https://cloud.tencent.com/document/product/583/9708#cron-.E8.A1.A8.E8.BE.BE.E5.BC.8F)
 
-![image-20210601192629284](https://gitee.com/ahaox/images-picgo/raw/master/img/20210601192629.png)
+![image-20210601192629284](https://pictureahao.oss-cn-chengdu.aliyuncs.com/img/20210601192629.png)
 
 
 
@@ -214,7 +214,7 @@ cd src/ && /var/lang/python3/bin/python3 -m pip install -r requirements.txt -t .
 
 直接复制 ==座位预约服务云函数== `CDU-Lib-Robot-Reserve` ,   把函数名称更改为：`CDU-Lib-Robot-SignIn` 
 
-![image-20210601193511214](https://gitee.com/ahaox/images-picgo/raw/master/img/20210601193511.png)
+![image-20210601193511214](https://pictureahao.oss-cn-chengdu.aliyuncs.com/img/20210601193511.png)
 
 
 
@@ -222,11 +222,11 @@ cd src/ && /var/lang/python3/bin/python3 -m pip install -r requirements.txt -t .
 
 进入云函数后，修改执行方法为：`MainSignIn.main`
 
-<img src="https://gitee.com/ahaox/images-picgo/raw/master/img/20210601193822.png" alt="image-20210601193822433" style="zoom: 67%;" />
+<img src="https://pictureahao.oss-cn-chengdu.aliyuncs.com/img/20210601193822.png" alt="image-20210601193822433" style="zoom: 67%;" />
 
 点击部署，部署成功后再测试
 
-![image-20210601193943990](https://gitee.com/ahaox/images-picgo/raw/master/img/20210601193944.png)
+![image-20210601193943990](https://pictureahao.oss-cn-chengdu.aliyuncs.com/img/20210601193944.png)
 
 #### 4.3 设置定时
 
@@ -240,9 +240,9 @@ cd src/ && /var/lang/python3/bin/python3 -m pip install -r requirements.txt -t .
 
 第二个时间段 Cron表达式分别为： `0 21 14 * * * *` （表示每天14点21分开始执行签到服务，也就是比第二个时间段的开始时间提起4分钟进行签到）
 
-![image-20210601200014142](https://gitee.com/ahaox/images-picgo/raw/master/img/20210601200014.png)
+![image-20210601200014142](https://pictureahao.oss-cn-chengdu.aliyuncs.com/img/20210601200014.png)
 
-<img src="https://gitee.com/ahaox/images-picgo/raw/master/img/20210601200931.png" alt="image-20210601200931096" style="zoom:50%;" />
+<img src="https://pictureahao.oss-cn-chengdu.aliyuncs.com/img/20210601200931.png" alt="image-20210601200931096" style="zoom:50%;" />
 
 ### 5. 签退服务
 
@@ -250,17 +250,17 @@ cd src/ && /var/lang/python3/bin/python3 -m pip install -r requirements.txt -t .
 
 直接复制 ==座位预约服务云函数== `CDU-Lib-Robot-Reserve` ,   把函数名称更改为：`CDU-Lib-Robot-SignOut` 
 
-![image-20210601194934489](https://gitee.com/ahaox/images-picgo/raw/master/img/20210601194934.png)
+![image-20210601194934489](https://pictureahao.oss-cn-chengdu.aliyuncs.com/img/20210601194934.png)
 
 #### 5.2 修改函数执行方法
 
 进入云函数后，修改执行方法为：`MainSignOut.main`
 
-![image-20210601195253055](https://gitee.com/ahaox/images-picgo/raw/master/img/20210601195253.png)
+![image-20210601195253055](https://pictureahao.oss-cn-chengdu.aliyuncs.com/img/20210601195253.png)
 
 点击部署，部署成功后再测试
 
-![image-20210601195334718](https://gitee.com/ahaox/images-picgo/raw/master/img/20210601195334.png)
+![image-20210601195334718](https://pictureahao.oss-cn-chengdu.aliyuncs.com/img/20210601195334.png)
 
 #### 5.3 设置定时
 
@@ -274,7 +274,7 @@ cd src/ && /var/lang/python3/bin/python3 -m pip install -r requirements.txt -t .
 
 第二个时间段 Cron表达式分别为： `0 21 20 * * * *` （表示每天20点21分开始执行签退服务，也就是比第二个时间段的结束时间提起4分钟进行签退）
 
-<img src="https://gitee.com/ahaox/images-picgo/raw/master/img/20210601201111.png" alt="image-20210601201111037" style="zoom:50%;" />
+<img src="https://pictureahao.oss-cn-chengdu.aliyuncs.com/img/20210601201111.png" alt="image-20210601201111037" style="zoom:50%;" />
 
 
 
